@@ -25,11 +25,18 @@ class Application
     elsif req.path.match(/add/)
       added_item = req.params["item"]
       if @@items.include?(added_item)
+<<<<<<< HEAD
         @@cart << added_item
         resp.write "added #{added_item}"
       else
         resp.write "We don't have that item"
       end
+=======
+        @@items << added_item
+        resp.write "added #{added_item}"
+      else
+        resp.write 
+>>>>>>> ecd546e760b018c351819ffcf67d6426679ee7a1
     else
       resp.write "Path Not Found"
     end
